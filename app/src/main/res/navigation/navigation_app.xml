@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_app"
+    app:startDestination="@id/listMemeFragment">
+
+    <fragment
+        android:id="@+id/infoMeme"
+        android:name="com.example.Appmvvm.InfoMeme"
+        android:label="fragment_info_meme"
+        tools:layout="@layout/fragment_info_meme" />
+    <fragment
+        android:id="@+id/listMemeFragment"
+        android:name="com.example.Appmvvm.ListMemeFragment"
+        android:label="fragment_list_meme"
+        tools:layout="@layout/fragment_list_meme" >
+        <action
+            android:id="@+id/action_listMemeFragment_to_infoMeme"
+            app:destination="@id/infoMeme" />
+    </fragment>
+</navigation>
